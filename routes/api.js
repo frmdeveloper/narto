@@ -175,7 +175,7 @@ Akhir Pesan Error
 
 router.use(favicon(__path + "/views/favicon.ico"));
 
-const listkey = ["Fxc7", "manogay"];
+const listkey = ["erdwpe", "erdwpe28"];
 
 router.post("/apikey", async (req, res, next) => {
   const key = req.query.key;
@@ -2367,7 +2367,7 @@ router.get('/maker/ttp', async (req, res, next) => {
   if(!Apikey) return res.json(loghandler.notparam)
   if(listkey.includes(Apikey)) {
   random = new Date
-data = await fetch(`https://api.areltiyan.site/sticker_maker?text=${encodeURIComponent(req.query.text)}`).then(v => v.json())
+data = await fetch(`https://api.areltiyan.xyz/sticker_maker?text=${encodeURIComponent(req.query.text)}`).then(v => v.json())
          base64 = data.base64
          var buffer = base64.slice(22)
          await fs.writeFileSync(__path +`/tmp/ttp.png`, buffer, 'base64')
